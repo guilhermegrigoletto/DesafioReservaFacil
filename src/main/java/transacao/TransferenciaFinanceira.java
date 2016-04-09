@@ -48,20 +48,8 @@ public class TransferenciaFinanceira implements Serializable{
 	@Override
 	public String toString() {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-		return  "[" + formatter.format(dataAgendamento.getTime()) +"] De conta " + contaOrigem + " para " + contaDestino + " R$" + valorTransferencia + " (Taxa " + taxaCalculada + ") transação " + tipoTransacao;
+		return  "[" + formatter.format(dataAgendamento.getTime()) +"] De conta " + contaOrigem + " para " + contaDestino + " R$" + valorTransferencia + " (Taxa " + taxaCalculada + ") transaÃ§Ã£o " + tipoTransacao;
 	}
-	
-	public void salvar() {
-		   try{
-				FileOutputStream fout = new FileOutputStream("c:\\transferencias.ser");
-				ObjectOutputStream oos = new ObjectOutputStream(fout);   
-				oos.writeObject(this);
-				oos.close();
-				System.out.println("Salvo");
-				   
-			   }catch(Exception ex){
-				   ex.printStackTrace();
-			   }
-	}
+
 	
 }
