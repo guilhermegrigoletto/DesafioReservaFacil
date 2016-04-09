@@ -8,6 +8,8 @@ As dependências utilizadas foram :
 Utilizei a interface transacao.Transacao para abstrair o comportamento diferente para cada transação e assim tornar o código desacoplado de quem usa
 bastando criar a transação por uma Factory(TransacaoFactory) que encapsula as possíveis transações. A classe TransferenciaFinanceira é usada
 para armazenar os dados (POJO), assim como chamar o cálculo da taxa, de maneira encapsulada.
+Para cálculo de valores foi utilizado a classe BigDecimal para não ter problema de arredondamento.
 
 Foi criado um método main para poder executar o programa, ele está localizado em src/main/java/rf/App.java
 
+Foram criados testes unitários em JUnit localizados em src/test/java para testar o negócio que cada Transação deve executar.
