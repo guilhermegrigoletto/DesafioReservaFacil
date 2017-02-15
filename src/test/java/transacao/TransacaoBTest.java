@@ -12,7 +12,7 @@ import util.DataUtil;
 
 public class TransacaoBTest {
 	
-	private static final int DELTA_COMPARACAO = 2;
+	private static final int DELTA_COMPARACAO = 1;
 	
 	@Test
 	public void testDataHojeDeveRetornarTaxa10(){ 
